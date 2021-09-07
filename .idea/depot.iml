@@ -40,6 +40,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activestorage (v6.1.4.1, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v6.1.4.1, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="addressable (v2.8.0, rbenv: 2.7.4) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.16, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.8.1, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.2.4, rbenv: 2.7.4) [gem]" level="application" />
@@ -53,6 +54,7 @@
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.15.3, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v0.5.2, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v1.8.10, rbenv: 2.7.4) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="i18n-js (v3.9.0, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v2.11.2, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v3.7.0, rbenv: 2.7.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="loofah (v2.12.0, rbenv: 2.7.4) [gem]" level="application" />
@@ -117,6 +119,7 @@
         <option value="controller" />
         <option value="generator" />
         <option value="helper" />
+        <option value="i18n:js:config" />
         <option value="integration_test" />
         <option value="jbuilder" />
         <option value="job" />
@@ -147,6 +150,7 @@
         <option value="controller" />
         <option value="generator" />
         <option value="helper" />
+        <option value="i18n:js:config" />
         <option value="integration_test" />
         <option value="jbuilder" />
         <option value="job" />
@@ -341,6 +345,15 @@
                 </subtasks>
               </RakeTaskImpl>
               <RakeTaskImpl description="" fullCommand="db:truncate_all" id="truncate_all" />
+            </subtasks>
+          </RakeTaskImpl>
+          <RakeTaskImpl id="i18n">
+            <subtasks>
+              <RakeTaskImpl id="js">
+                <subtasks>
+                  <RakeTaskImpl description="Export translations to JS file(s)" fullCommand="i18n:js:export" id="export" />
+                </subtasks>
+              </RakeTaskImpl>
             </subtasks>
           </RakeTaskImpl>
           <RakeTaskImpl id="log">
